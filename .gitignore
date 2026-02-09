@@ -1,0 +1,17 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+
+# Ignorar todo ChromaDB
+data/chroma_db/*
+
+# Permitir archivos JSON dentro de chroma_db
+!data/chroma_db/**/*.json
