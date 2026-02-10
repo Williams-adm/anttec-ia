@@ -3,10 +3,9 @@ nixPkgs = ["python311"]
 
 [phases.install]
 cmds = [
-    "curl -LsSf https://astral.sh/uv/install.sh | sh",
-    "export PATH=\"$HOME/.local/bin:$PATH\"",
-    "uv venv",
-    "uv pip install -r requirements.txt"
+  "curl -LsSf https://astral.sh/uv/install.sh | sh",
+  "export PATH=\"$HOME/.local/bin:$PATH\"",
+  "uv sync"
 ]
 
 [start]
