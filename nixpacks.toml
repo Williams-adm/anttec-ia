@@ -5,8 +5,9 @@ nixPkgs = ["python311"]
 cmds = [
     "curl -LsSf https://astral.sh/uv/install.sh | sh",
     "export PATH=\"$HOME/.local/bin:$PATH\"",
-    "uv pip install -r requirements.txt --system"
+    "uv venv",
+    "uv pip install -r requirements.txt"
 ]
 
 [start]
-cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT"
+cmd = ". .venv/bin/activate && uvicorn main:app --host 0.0.0.0 --port $PORT"
